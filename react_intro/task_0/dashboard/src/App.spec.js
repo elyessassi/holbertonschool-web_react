@@ -6,7 +6,7 @@ describe("App component", () => {
         render(<App />)
         const h1elem = screen.getByRole("heading")
         expect(h1elem).toBeInTheDocument()
-    }),
+    })
     it("are the paragraphs correct", () => {
         render(<App />)
         const Para1 = screen.getByText("Login to access the full dashboard")
@@ -14,7 +14,7 @@ describe("App component", () => {
         expect(Para1).toBeInTheDocument()
         expect(Para2).toBeInTheDocument()
 
-    }),
+    })
     it("is the image rendred", () => {
         render(<App />)
         const img = screen.getByAltText("holberton logo")
