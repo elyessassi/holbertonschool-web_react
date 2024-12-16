@@ -1,0 +1,25 @@
+
+import './App.css'
+import {getCurrentYear, getFooterCopy} from "./utils.js" 
+import Notifications from './Notifications.jsx'
+
+function App() {
+  return (
+    <>
+    <div className='root-notifications'><Notifications /></div>
+      <div className='App-header' alt="holberton logo">
+        <img src="src/assets/holberton-logo.jpg" alt="holberton logo" ></img>
+        <h1 role="heading">School dashboard</h1>
+      </div>
+      <div className='App-body'><p>Login to access the full dashboard</p></div>
+      <label htmlFor="email">Email</label>
+      <input id="email"></input>
+      <label htmlFor="pw">Password</label>
+      <input id="pw"></input>
+      <button>OK</button>
+      <div className='App-footer'><p>Copyright {getCurrentYear()} - {getFooterCopy()}</p></div>
+    </>
+  )
+}
+
+export default App
