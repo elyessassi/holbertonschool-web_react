@@ -6,18 +6,29 @@ describe("App component", () => {
         render(<App />)
         const h1elem = screen.getByRole("heading")
         expect(h1elem).toBeInTheDocument()
-    }),
-    it("are the paragraphs correct", () => {
-        render(<App />)
-        const Para1 = screen.getByText("Login to access the full dashboard")
-        const Para2 = screen.getByText("Copyright 2024 - holberton School")
-        expect(Para1).toBeInTheDocument()
-        expect(Para2).toBeInTheDocument()
-
-    }),
+    })
     it("is the image rendred", () => {
         render(<App />)
         const img = screen.getByAltText("holberton logo")
         expect(img).toBeInTheDocument()
+    })
+    it("are the input elements renderd", () => {
+        render(<App />)
+        const email = screen.getByRole("TextAreaEmail")
+        const pw = screen.getByRole("TextAreaPassword")
+        expect(email).toBeInTheDocument()
+        expect(pw).toBeInTheDocument()
+    })
+    it("are the labels rendred", () => {
+        render(<App />)
+        const email = screen.getByLabelText("Email")
+        const pw = screen.getByLabelText("Password")
+        expect(email).toBeInTheDocument()
+        expect(pw).toBeInTheDocument()
+    })
+    it("is the button rendred", () => {
+        render(<App />)
+        const btn = screen.getByRole("button")
+        expect(btn).toBeInTheDocument()
     })
 })
