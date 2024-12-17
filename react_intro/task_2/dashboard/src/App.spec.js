@@ -30,5 +30,6 @@ describe("App component", () => {
         render(<App />)
         const btn = screen.getByRole("button")
         expect(btn).toBeInTheDocument()
+        expect(btn.textContent).toMatch(/OK/)
     })
 })
