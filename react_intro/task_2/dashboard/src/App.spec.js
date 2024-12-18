@@ -14,8 +14,8 @@ describe("App component", () => {
     })
     it("are the input elements renderd", () => {
         render(<App />)
-        const email = screen.getByRole("TextAreaEmail")
-        const pw = screen.getByRole("TextAreaPassword")
+        const email = screen.getByTestId("email")
+        const pw = screen.getByTestId("pw")
         expect(email).toBeInTheDocument()
         expect(pw).toBeInTheDocument()
     })
@@ -28,7 +28,7 @@ describe("App component", () => {
     })
     it("is the button rendred", () => {
         render(<App />)
-        const btn = screen.getByRole("button")
+        const btn = screen.getByTestId("btn")
         expect(btn).toBeInTheDocument()
         expect(btn.textContent).toMatch(/OK/)
     })
