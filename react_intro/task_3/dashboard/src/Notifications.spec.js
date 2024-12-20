@@ -8,7 +8,7 @@ test("testing if the paragraph text is correct", () => {
     expect(p.textContent).toBe("Here is the list of notifications")  
 })
 
-test("checking the existance of the button element ", () => {
+test("checking the existance of the button element", () => {
     render(<Notifications/>)
     const btn = screen.getByRole("button")
     expect(btn).toBeInTheDocument()
@@ -17,7 +17,7 @@ test("checking the existance of the button element ", () => {
 test("checking if the 3 li elements are rendred", () => {
     render(<Notifications/>)
     const liElems = screen.getAllByRole("listitem")
-    liElems.map((elem) => {expect(elem).toBeInTheDocument})
+    liElems.map((elem) => {expect(elem).toBeInTheDocument()})
 })
 
 test("checking if the right text is logged when the button is clicked", async () => {
