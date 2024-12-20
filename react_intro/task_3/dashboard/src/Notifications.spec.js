@@ -5,7 +5,7 @@ import userEvent from '@testing-library/user-event'
 test("testing if the paragraph text is correct", () => {
     render(<Notifications/>)
     const p = screen.getByRole("paragraph")
-    expect(p.textContent).toBe("Here is the list of notifications")  
+    expect(p.textContent).toBe(/Here is the list of notifications/i)  
 })
 
 test("checking the existance of the button element", () => {
@@ -26,7 +26,7 @@ test("checking if the right text is logged when the button is clicked", async ()
     const btn = screen.getByRole("button")
     const userE = userEvent.setup()
     await userE.click(btn)
-    expect(spy).toHaveBeenCalledWith("Close button has been clicked")
+    expect(spy).toHaveBeenCalledWith(/Close button has been clicked/i)
     spy.mockRestore()
 })
 
