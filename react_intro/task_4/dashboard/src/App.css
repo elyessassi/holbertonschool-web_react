@@ -1,0 +1,34 @@
+.App-header {
+  display: flex;
+  border-bottom: 3px solid #e1003c;
+}
+.App-header img {
+  height: 200px;
+  width: 200px;
+}
+
+.App-header h1 {
+  align-self: center;
+  font-family: Arial;
+  font-weight: bold;
+  color: #e1003c;
+}
+
+.App-body {
+  height: 500px;
+  margin: 30px 15px;
+}
+
+.App-footer {
+  display: flex;
+  justify-content: center;
+  border-top: 3px solid #e1003c;
+  font-style: italic;
+}
+
+
+
+input {
+  margin-right: 10px;
+  margin-left: 10px;
+}
