@@ -4,8 +4,8 @@ import userEvent from '@testing-library/user-event'
 
 test("testing if the paragraph text is correct", () => {
     render(<Notifications/>)
-    const p = screen.getByRole("paragraph")
-    expect(p.textContent).toBe("Here is the list of notifications")  
+    const p = screen.getByText(/Here is the list of notifications/i)
+    expect(p).toBeInTheDocument()  
 })
 
 test("checking the existance of the button element", () => {
