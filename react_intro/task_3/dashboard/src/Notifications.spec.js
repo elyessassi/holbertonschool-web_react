@@ -1,5 +1,5 @@
 import Notifications from './Notifications.jsx'
-import {fireEvent, render, screen} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 
 test("testing if the paragraph text is correct", () => {
