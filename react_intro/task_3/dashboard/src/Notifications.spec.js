@@ -17,7 +17,7 @@ test("checking the existance of the button element", () => {
 test("checking if the 3 li elements are rendred", () => {
     render(<Notifications/>)
     const liElems = screen.getAllByRole("listitem")
-    liElems.map((elem) => {expect(elem).toBeInTheDocument()})
+    liElems.forEach((elem) => {expect(elem).toBeInTheDocument()})
 })
 
 test("checking if the right text is logged when the button is clicked", async () => {
