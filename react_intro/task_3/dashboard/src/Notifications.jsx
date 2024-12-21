@@ -5,7 +5,7 @@ function Notifications() {
     return (
     <>
     <div className="notifications">
-        <p>Here is the list of notifications</p>
+        <p role="paragraph">Here is the list of notifications</p>
         <button aria-label="Close" style={{display: "inline"}} onClick={() => {console.log("Close button has been clicked")}} type="button"><img src="/src/assets/close-button.png" alt="close button"/></button>
         <ul>
             <li data-priority="default">New course available</li>
