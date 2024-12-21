@@ -29,5 +29,3 @@ test("checking if the right text is logged when the button is clicked", async ()
     expect(spy).toHaveBeenCalledWith("Close button has been clicked")
     spy.mockRestore()
 })
-
-
