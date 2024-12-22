@@ -1,4 +1,4 @@
-import {render, screen} from '@testing-library/react'
+import {getByText, render, screen} from '@testing-library/react'
 import App from './App.jsx'
 
 describe("App component", () => {
@@ -29,5 +29,10 @@ describe("App component", () => {
         const btn = screen.getByRole("button", { name: /ok/i })
         expect(btn).toBeInTheDocument()
         expect(btn.textContent).toMatch(/OK/i)
+    })
+    it ("if the footer paragraph rendred", () => {
+        render(<App />)
+        const p = screen.getByText("Copyright 2024 - Holberton School main dashboard")
+        expect(p).toBeInTheDocument()
     })
 })
