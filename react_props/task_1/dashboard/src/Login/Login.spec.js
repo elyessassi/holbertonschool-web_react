@@ -6,14 +6,14 @@ describe("Login component", () => {
     it("are the input elements renderd", () => {
         render(<Login />)
         const allInputs = screen.getAllByRole("textbox")
-        allInputs.map((elem) => {expect(elem).toBeInTheDocument()})
+        expect(allInputs.length).toBe(2)
     })
     it("are the labels rendred", () => {
         render(<Login />)
-        const email = screen.getByLabelText("Email")
-        const pw = screen.getByLabelText("Password")
-        expect(email).toBeInTheDocument()
-        expect(pw).toBeInTheDocument()
+        const label1 = screen.getByLabelText("Email")
+        expect(label1).toBeInTheDocument()
+        const label2 = screen.getByLabelText("Password")
+        expect(label2).toBeInTheDocument()
     })
     it("is the button rendred", () => {
         render(<Login />)
