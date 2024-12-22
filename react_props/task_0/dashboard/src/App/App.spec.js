@@ -1,4 +1,4 @@
-import {getByRole, render, screen} from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
 import Login from '../Login/Login.jsx'
 import Header from '../Header/Header.jsx'
 import Footer from '../Footer/Footer.jsx'
