@@ -11,11 +11,9 @@ import CourseList from '../CourseList/CourseList.jsx'
 import PropTypes from 'prop-types'
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.notificationsList = [{id: uuidv4(), type: "default", value: "New course available"}, {id: uuidv4(), type: "urgent", value: "New resume available"}, {id: uuidv4(), type: "urgent", HTML: getLatestNotification()}]
-    this.coursesList = [{id: uuidv4(), name: "ES6", credit: 60}, {id: uuidv4(), name: "Webpack", credit: 20}, {id: uuidv4(), name: "React", credit: 40}]
-  };
+
+  notificationsList = [{id: uuidv4(), type: "default", value: "New course available"}, {id: uuidv4(), type: "urgent", value: "New resume available"}, {id: uuidv4(), type: "urgent", HTML: getLatestNotification()}]
+  coursesList = [{id: uuidv4(), name: "ES6", credit: 60}, {id: uuidv4(), name: "Webpack", credit: 20}, {id: uuidv4(), name: "React", credit: 40}]
   render () {
     return (
     <Fragment>
