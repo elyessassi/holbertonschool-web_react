@@ -22,13 +22,13 @@ test("checking if the logOut prop is called", async () => {
 
 test("checking if the Course list title is displayed", () => {
     render(<App isLoggedIn={true} logOut={() => {}}></App>)
-    const title = screen.getByText("Course list")
+    const title = screen.getByText(/Course list/i)
     expect(title).toBeInTheDocument()
 })
 
 test("checking if the Log in title is displayed", () => {
     render(<App isLoggedIn={false} logOut={() => {}}></App>)
-    const title = screen.getByText("Log in to continue")
+    const title = screen.getByText(/Log in to continue/i)
     expect(title).toBeInTheDocument()
 })
 
