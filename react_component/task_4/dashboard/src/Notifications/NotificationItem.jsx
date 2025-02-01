@@ -1,9 +1,9 @@
 import PropTypes from "prop-types"
 import "./Notifications.css"
 import {v4 as uuid4} from "uuid"
-import { Component ,PureComponent } from "react"
+import { Component } from "react"
 
-class NotificationItem extends PureComponent {
+class NotificationItem extends Component {
     render() {
         if (this.props.html != undefined) {
             let id = uuid4()
