@@ -1,7 +1,7 @@
 import PropTypes from "prop-types"
 import "./Notifications.css"
 import {v4 as uuid4} from "uuid"
-import { Component, PureComponent  } from "react"
+import { PureComponent  } from "react"
 
 class NotificationItem extends PureComponent {
     render() {
