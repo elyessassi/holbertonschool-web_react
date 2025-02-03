@@ -19,7 +19,9 @@ let styles = StyleSheet.create({
   mainSection: {
     borderTop: "3px solid #e1003c"
   },
-  body: {}
+  body: {
+    margin: "3px"
+  }
 })
 
 
