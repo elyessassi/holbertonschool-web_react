@@ -10,7 +10,16 @@ class Notifications extends Component {
         console.log(`Notification ${id} has been marked as read`)
     }
 
+    shouldComponentUpdate(nextProps) {
+        if (nextProps.notifications.length != this.props.notifications.length) {
+            return(true)
+        } else {
+            return(false)
+        }
+    }
+
     render() {
+        console.log("rendered")
         if (this.props.displayDrawer == false) {
             return (<>
                         <div className='notifications-title' role='paragraph'>Your notifications</div>
