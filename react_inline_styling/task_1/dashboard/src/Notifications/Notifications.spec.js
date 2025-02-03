@@ -3,6 +3,15 @@ import { render, screen } from '@testing-library/react'
 import { v4 as uuidv4 } from 'uuid'
 import { getLatestNotification } from '../utils/utils.js'
 import userEvent from '@testing-library/user-event'
+import {StyleSheetTestUtils} from 'aphrodite'
+
+beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection()
+})
+
+afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection()
+})
 
 
 test("if the displayDrawler is false", () => {
