@@ -1,7 +1,15 @@
 import {render ,screen} from '@testing-library/react'
 import App from "./App"
 import userEvent from '@testing-library/user-event'
+import {StyleSheetTestUtils} from 'aphrodite'
 
+beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection()
+})
+
+afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection()
+})
 
 test("checking if the alert is called with the right string", async () => {
     render(<App isLoggedIn={true} logOut={() => {}}></App>)
