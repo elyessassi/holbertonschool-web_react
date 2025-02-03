@@ -42,4 +42,24 @@ test("if the message Notification {id} has been marked as read is logged", async
     jest.clearAllMocks()
 })
 
+test("Checking that the Notifications component doesn't re-render if the length of the notifications prop remains the same", () => {
+    const MockedFunc = jest.spyOn(console, "log").mockImplementation(() => {})
+    let {rerender} = render(<Notifications notifications={[{id: uuidv4(), type: "default", value: "New course available"}, {id: uuidv4(), type: "urgent", value: "New resume available"}, {id: uuidv4(), type: "urgent", HTML: getLatestNotification()}]} displayDrawer={true}/>)
+    expect(MockedFunc).toHaveBeenCalled()
+    jest.clearAllMocks()
+    rerender(<Notifications notifications={[{id: uuidv4(), type: "default", value: "New course available"}, {id: uuidv4(), type: "urgent", value: "New resume available"}, {id: uuidv4(), type: "urgent", HTML: getLatestNotification()}]} displayDrawer={true}/>)
+    expect(MockedFunc).not.toHaveBeenCalled()
+    jest.clearAllMocks()
+})
+
+test("Checking that the Notifications component doesn't re-render if the length of the notifications prop remains the same", () => {
+    const MockedFunc = jest.spyOn(console, "log").mockImplementation(() => {})
+    let {rerender} = render(<Notifications notifications={[{id: uuidv4(), type: "default", value: "New course available"}, {id: uuidv4(), type: "urgent", value: "New resume available"}, {id: uuidv4(), type: "urgent", HTML: getLatestNotification()}]} displayDrawer={true}/>)
+    expect(MockedFunc).toHaveBeenCalled()
+    jest.clearAllMocks()
+    rerender(<Notifications notifications={[{id: uuidv4(), type: "urgent", value: "New resume available"}, {id: uuidv4(), type: "urgent", HTML: getLatestNotification()}]} displayDrawer={true}/>)
+    expect(MockedFunc).toHaveBeenCalled()
+    jest.clearAllMocks()
+})
+
 
