@@ -21,7 +21,8 @@ let styles = StyleSheet.create({
   },
   body: {
     margin: "3px"
-  }
+  },
+  footer: {}
 })
 
 
