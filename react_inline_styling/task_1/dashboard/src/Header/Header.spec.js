@@ -1,5 +1,14 @@
 import {render, screen} from '@testing-library/react'
 import Header from './Header.jsx'
+import {StyleSheetTestUtils} from 'aphrodite'
+
+beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection()
+})
+
+afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection()
+})
 
 describe("Header component", () => {
     it("is the header rendered", () => {

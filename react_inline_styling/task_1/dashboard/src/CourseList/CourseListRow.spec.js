@@ -1,5 +1,14 @@
 import {render, screen} from '@testing-library/react'
 import CourseListRow from './CourseListRow'
+import {StyleSheetTestUtils} from 'aphrodite'
+
+beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection()
+})
+
+afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection()
+})
 
 test("checking if the correct element in rendred when is header is true and textSecondCell is null", () => {
     render(<table><thead><CourseListRow isHeader={true} textFirstCell={"hello"} textSecondCell={null}/></thead></table>)
