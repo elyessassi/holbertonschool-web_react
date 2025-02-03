@@ -2,6 +2,15 @@
 import {render, screen} from '@testing-library/react'
 import Footer from './Footer.jsx'
 import * as myModule from '../utils/utils.js'
+import {StyleSheetTestUtils} from 'aphrodite'
+
+beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection()
+})
+
+afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection()
+})
 
 describe("Footer component", () => {
     it ("if the footer paragraph rendred", () => {
