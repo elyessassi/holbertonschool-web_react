@@ -1,6 +1,15 @@
 import {render, screen} from '@testing-library/react'
 import Login from './Login.jsx'
 import userEvent from '@testing-library/user-event'
+import {StyleSheetTestUtils} from 'aphrodite'
+
+beforeEach(() => {
+    StyleSheetTestUtils.suppressStyleInjection()
+})
+
+afterEach(() => {
+    StyleSheetTestUtils.clearBufferAndResumeStyleInjection()
+})
 
 describe("Login component", () => {
     it("are the input elements renderd", () => {
