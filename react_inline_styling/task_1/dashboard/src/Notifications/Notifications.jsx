@@ -1,4 +1,4 @@
-import "./Notifications.css"
+
 import PropTypes from 'prop-types'
 import NotificationItem from "./NotificationItem.jsx"
 import {v4 as uuid4} from "uuid"
