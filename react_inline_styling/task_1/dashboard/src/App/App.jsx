@@ -3,8 +3,8 @@ import Notifications from '../Notifications/Notifications.jsx'
 import Header from '../Header/Header.jsx'
 import Footer from '../Footer/Footer.jsx'
 import Login from '../Login/Login.jsx'
-import BodySecion from "../BodySection/BodySection.jsx"
-import BodySecionWithMarginBottom from "../BodySection/BodySectionWithMarginBottom.jsx"
+import BodySection from "../BodySection/BodySection.jsx"
+import BodySectionWithMarginBottom from "../BodySection/BodySectionWithMarginBottom.jsx"
 import { Fragment, Component } from 'react'
 import { getLatestNotification } from '../utils/utils.js'
 import { v4 as uuidv4 } from 'uuid'
@@ -56,8 +56,8 @@ class App extends Component {
       <div><Notifications notifications={this.notificationsList} displayDrawer={true}/></div>
       <Header />
       <div className={css(styles.mainSection)}>
-        {this.props.isLoggedIn == true ? <BodySecionWithMarginBottom title="Course list"><CourseList courses={this.coursesList}></CourseList></BodySecionWithMarginBottom> : <BodySecionWithMarginBottom title="Log in to continue"><Login /></BodySecionWithMarginBottom>}
-        <BodySecion title="News from the School"><p>Holberton School News goes here</p></BodySecion>
+        {this.props.isLoggedIn == true ? <BodySectionWithMarginBottom title="Course list"><CourseList courses={this.coursesList}></CourseList></BodySectionWithMarginBottom> : <BodySectionWithMarginBottom title="Log in to continue"><Login /></BodySectionWithMarginBottom>}
+        <BodySection title="News from the School"><p>Holberton School News goes here</p></BodySection>
       </div>
       <Footer/>
     </Fragment>
