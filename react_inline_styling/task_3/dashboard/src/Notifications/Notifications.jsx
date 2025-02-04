@@ -52,7 +52,9 @@ const styles = StyleSheet.create({
         width: "10px"
     },
     UnordredList: {
-        paddingLeft: "0px",
+        "@media (max-width: 900px)" :{
+            paddingLeft: "0px",
+        }
     }
 })
 
