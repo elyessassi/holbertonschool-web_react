@@ -1,5 +1,6 @@
 import {render, screen} from '@testing-library/react'
 import App from './App.jsx'
+import { getCurrentYear } from './utils.js'
 
 describe("App component", () => {
     it("is the header rendered", () => {
@@ -10,7 +11,7 @@ describe("App component", () => {
     it("are the paragraphs correct", () => {
         render(<App />)
         const Para1 = screen.getByText("Login to access the full dashboard")
-        const Para2 = screen.getByText("Copyright 2024 - holberton School")
+        const Para2 = screen.getByText(`Copyright ${getCurrentYear()} - holberton School`)
         expect(Para1).toBeInTheDocument()
         expect(Para2).toBeInTheDocument()
 
