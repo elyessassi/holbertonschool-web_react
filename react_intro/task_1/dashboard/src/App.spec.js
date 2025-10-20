@@ -12,7 +12,7 @@ describe("App component", () => {
         render(<App />)
         screen.debug()
         const Para1 = screen.getByText("Login to access the full dashboard")
-        const Para2 = screen.getByText(`Copyright 2000 - holberton School`)
+        const Para2 = screen.getByText(`Copyright ${getCurrentYear()} - holberton School`)
         expect(Para1).toBeInTheDocument()
         expect(Para2).toBeInTheDocument()
 
