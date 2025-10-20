@@ -12,7 +12,7 @@ function App() {
         <h1 role="heading">School dashboard</h1>
       </div>
       <div className='App-body'><p>Login to access the full dashboard</p></div>
-      <div className='App-footer'><p>Copyright {getCurrentYear()} - holberton School</p></div>
+      <div className='App-footer'><p>Copyright 2024 - holberton School</p></div>
     </>
   )
 }
