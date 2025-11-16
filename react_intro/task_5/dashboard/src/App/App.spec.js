@@ -32,7 +32,7 @@ describe("App component", () => {
     })
     it ("if the footer paragraph rendred", () => {
         render(<App />)
-        const p = screen.getByText("Copyright 2024 - Holberton School main dashboard")
+        const p = screen.getByText("Copyright 2025 - Holberton School main dashboard")
         expect(p).toBeInTheDocument()
     })
 })
