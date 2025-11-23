@@ -72,7 +72,6 @@ class App extends Component {
   render () {
     return (
     <Fragment>
-      <button onClick={this.handleDisplayDrawer}></button>
       <div><Notifications notifications={this.notificationsList} displayDrawer={this.state.displayDrawer} handleDisplayDrawer={this.handleDisplayDrawer} handleHideDrawer={this.handleHideDrawer}/></div>
       <Header />
       <div className={css(styles.mainSection)}>
