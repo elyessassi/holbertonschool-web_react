@@ -19,7 +19,7 @@ test("checking if login is rendered", () => {
 test("checking if footer is rendered", () => {
   render(<Footer />);
   const f = screen.getByText(
-    "Copyright 2025 - Holberton School main dashboard"
+    "Copyright 2026 - Holberton School main dashboard"
   );
   expect(f).toBeInTheDocument();
 });
