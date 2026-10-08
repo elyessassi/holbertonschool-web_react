@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import "./Notifications.css"
 
 function NotificationItem({type, html, value}) {
-    if (html != undefined) {
+    if (html != undefined && type) {
         return (<li data-notification-type={type} dangerouslySetInnerHTML={{__html: html}} role="listitem" ></li>)
     }
     else {
