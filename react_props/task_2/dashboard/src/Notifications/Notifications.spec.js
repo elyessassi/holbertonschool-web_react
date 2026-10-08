@@ -5,20 +5,20 @@ import { v4 as uuidv4 } from 'uuid'
 
 
 test("testing if the paragraph text is correct", () => {
-    render(<Notifications />)
+    render(<Notifications notifications={[{id: uuidv4(), type: "default", value: "New course available"}]} />)
     const p = screen.getByText(/Here is the list of notifications/i)
     expect(p).toBeInTheDocument()
 })
 
 test("checking the existance of the button element", () => {
-    render(<Notifications />)
+    render(<Notifications notifications={[{id: uuidv4(), type: "default", value: "New course available"}]} />)
     const btn = screen.getByRole("button")
     expect(btn).toBeInTheDocument()
 })
 
 
 test("checking if the right text is logged when the button is clicked", async () => {
-    render(<Notifications />)
+    render(<Notifications notifications={[{id: uuidv4(), type: "default", value: "New course available"}]} />)
     const spy = jest.spyOn(console, 'log')
     const btn = screen.getByRole("button")
     const user = userEvent.setup()
@@ -29,9 +29,9 @@ test("checking if the right text is logged when the button is clicked", async ()
 
 test("checing if the component renders the 3 li tags", () => {
     const mnotifications = [
-        {key: uuidv4(), type: "default", value: "New course available", html: undefined},
-        {key: uuidv4(), type: "urgent", value: "New resume available", html: undefined},
-        {key: uuidv4(), type: "urgent", value: "Urgent requirement - complete by EOD", html: undefined}
+        {id: uuidv4(), type: "default", value: "New course available", html: undefined},
+        {id: uuidv4(), type: "urgent", value: "New resume available", html: undefined},
+        {id: uuidv4(), type: "urgent", value: "Urgent requirement - complete by EOD", html: undefined}
     ]
 
     render(<Notifications notifications={mnotifications}/>)
