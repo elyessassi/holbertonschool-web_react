@@ -12,7 +12,7 @@ describe("Footer component", () => {
     it("checking if the footer renderes the correct paragraph content when the argument of getFooterCopy is true", () => {
         jest.spyOn(myModule, 'getFooterCopy').mockImplementation(() => 'Holberton School')
         render(<Footer />)
-        const p = screen.getByText("Copyright 2025 - Holberton School")
+        const p = screen.getByText("Copyright 2026 - Holberton School")
         expect(p).toBeInTheDocument()
     })
 })
