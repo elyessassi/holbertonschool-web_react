@@ -7,7 +7,8 @@ function NotificationItem({type, html, value}) {
     }
     else {
         return (<li data-notification-type={type} role="listitem" >{value}</li>)
-    }   
+    }
+    
 }
 
 NotificationItem.propTypes = {
